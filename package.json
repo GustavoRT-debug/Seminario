@@ -1,0 +1,12 @@
+{
+    "name": "calculadora",
+    "version": "1.0.0",
+    "description": "Uma calculadora simples em Ruby.",
+    "main": "index.js",
+    "scripts": {
+      "test": "bundle exec rake test"
+    },
+    "author": "Gustavo T.",
+    "license": "ISC"
+  }
+  
