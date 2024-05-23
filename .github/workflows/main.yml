@@ -27,7 +27,7 @@ jobs:
         bundle install
 
     - name: Run tests
-      run: bundle exec ruby testes/testes.rb
+      run: bundle exec ruby calculadora/testes/testes.rb
 
     - name: Generate coverage report
       run: bundle exec ruby coverage_report.rb
