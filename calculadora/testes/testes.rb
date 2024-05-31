@@ -25,11 +25,27 @@ class TestCalculator < Minitest::Test
     assert_equal 2, @calculator.calculate(6, 3, '/')
   end
 
+  def test_square_root
+    assert_equal 3, @calculator.calculate(9, nil, 'raiz')
+  end
+
+  def test_modulo
+    assert_equal 1, @calculator.calculate(10, 3, '%')
+  end
+
+  def test_power
+    assert_equal 8, @calculator.calculate(2, 3, '**')
+  end
+
+  def test_factorial
+    assert_equal 120, @calculator.calculate(5, nil, '!')
+  end
+
   def test_division_by_zero
     assert_equal "Erro: Divisão por zero!", @calculator.calculate(6, 0, '/')
   end
 
   def test_invalid_operation
-    assert_equal "Operação inválida.", @calculator.calculate(2, 3, '%')
+    assert_equal "Operação inválida.", @calculator.calculate(2, 3, '=')
   end
 end
