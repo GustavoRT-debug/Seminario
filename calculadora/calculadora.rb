@@ -17,6 +17,10 @@ class Calculator
       a % b
     when '**'
       a ** b
+    when 'pi'
+      Math::PI
+    when 'e'
+      Math::E
     when '!'
       factorial(a)    
     # Se a operação não for válida, retorna uma mensagem de erro  
@@ -39,16 +43,22 @@ class Calculator
 
     #Inicia um looping até o usuário escolher sair sair
     loop do
-      puts "Escolha uma operação: +, -, *, /, raiz, %, **, ! ou digite 'sair' para terminar"
+      puts "Escolha uma operação: +, -, *, /, raiz, %, **, !, e, pi ou digite 'sair' para terminar"
       operation = gets.chomp
-
+      
+      # quando  nem o 'a' ou 'b' são necessários (constantes)
       break if operation == 'sair'
-
+      if ['pi', 'e'].include?(operation)
+        a = nil
+        b = nil
+      else
       puts "Digite o primeiro número:"
       a = gets.chomp.to_i
+      end
+
 
       # se a operação for raiz ou fatorial apenas o "a" é necessário
-      if operation != 'raiz' && operation != '!'
+      if !['raiz', '!', 'pi', 'e', 'resposta'].include?(operation)
         puts "Digite o segundo número:"
         b = gets.chomp.to_i
       else

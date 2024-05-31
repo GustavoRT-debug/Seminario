@@ -40,7 +40,15 @@ class TestCalculator < Minitest::Test
   def test_factorial
     assert_equal 120, @calculator.calculate(5, nil, '!')
   end
+  
+  def test_pi_constant
+    assert_in_delta Math::PI, @calculator.calculate(nil, nil, 'pi'), 0.001
+  end
 
+  def test_e_constant
+    assert_in_delta Math::E, @calculator.calculate(nil, nil, 'e'), 0.001
+  end
+  
   def test_division_by_zero
     assert_equal "Erro: Divisão por zero!", @calculator.calculate(6, 0, '/')
   end
