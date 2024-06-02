@@ -34,7 +34,7 @@ RSpec.describe Calculator do
     end
 
     it 'Potência' do
-      expect(calculator.calculate(2, 3, '**')).to eq(8)
+      expect(calculator.calculate(2, 3, '')).to eq(8)
     end
 
     it 'Retornar o valor de Pi' do
@@ -51,6 +51,6 @@ RSpec.describe Calculator do
 
     it 'Operação invalida' do
       expect(calculator.calculate(5, 3, 'invalid')).to eq('Operação inválida.')
-    end
-  end
+    end
+  end
 end
