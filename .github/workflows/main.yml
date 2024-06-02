@@ -28,7 +28,7 @@ jobs:
 
     - name: Run tests
       run: bundle exec ruby calculadora/testes/testes.rb
-      run: bundle exec ruby calculadora/testes/test_mock.rb
+    
       
 
     - name: Generate coverage report
