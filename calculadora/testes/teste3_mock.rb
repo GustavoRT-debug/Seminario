@@ -1,7 +1,4 @@
-require 'simplecov'
-SimpleCov.start
-
-require_relative 'coverage_report'
+#require_relative 'coverage_report'
 
 require 'rspec'
 require_relative '../calculadora'
