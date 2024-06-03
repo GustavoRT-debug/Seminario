@@ -19,28 +19,20 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.1'
+        ruby-version: '3.1' # ou a versão do Ruby que você está usando
 
     - name: Install dependencies
       run: |
         gem install bundler
         bundle install
-
     - name: Run tests
-      run: |
-        bundle exec rspec calculadora/testes/teste2.rb
-
-    - name: List directory contents for debugging
-      run: ls -R
+      run: bundle exec ruby calculadora/testes/testes.rb
+           bundle exec rspec calculadora/testes/teste_mock.rb
+    
+      
 
     - name: Generate coverage report
-      run: |
-        if [ -f ./coverage_report.rb ]; then
-          bundle exec ruby ./coverage_report.rb
-        else
-          echo "coverage_report.rb not found in the root directory"
-          exit 1
-        fi
+      run: bundle exec ruby coverage_report.rb
 
     - name: Run bundler audit
       run: bundle exec bundler-audit check --update
