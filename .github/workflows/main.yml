@@ -30,15 +30,8 @@ jobs:
       run: bundle exec ruby calculadora/testes/testes.rb
            bundle exec rspec calculadora/testes/teste_mock.rb
     
-    - name: List directory contents for debugging
-      run: ls -R
-
     - name: Generate coverage report
-      run: |
-        if [ -f coverage_report.rb ]; then
-          bundle exec ruby coverage_report.rb
-        else
-          echo "coverage_report.rb not found"
-          exit 1
-        fi
-      
+      run: bundle exec ruby coverage_report.rb
+
+    - name: Run bundler audit
+      run: bundle exec bundler-audit check --update
