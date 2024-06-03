@@ -66,4 +66,4 @@ doc/
 .reek
 .rubocop.yml
 .rubocop_todo.yml
-coverage_report.rb
+calculadora/testes/coverage_report.rb
