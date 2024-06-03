@@ -25,7 +25,6 @@ jobs:
       run: |
         gem install bundler
         bundle install
-
     - name: Run tests
       run: bundle exec ruby calculadora/testes/testes.rb
            bundle exec rspec calculadora/testes/teste_mock.rb
