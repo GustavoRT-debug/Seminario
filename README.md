@@ -1,4 +1,3 @@
-![CI-CD]([https://github.com/GustavoRT-debug/Seminario/actions/workflows/main.yml/badge.svg)
 # Seminario Usando Ruby
 
 ## Calculadora em Ruby:
