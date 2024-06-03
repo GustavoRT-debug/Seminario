@@ -1,3 +1,8 @@
+require 'simplecov'
+SimpleCov.start
+
+require_relative 'coverage_report'
+
 require 'rspec'
 require_relative '../calculadora'
 
@@ -14,7 +19,6 @@ RSpec.describe Calculator do
 
       # Chamando o método calculate
       calculator.calculate(5, nil, '!')
-    end
-  end
+    end
+  end
 end
-
