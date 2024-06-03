@@ -28,7 +28,7 @@ jobs:
 
     - name: Run tests
       run: |
-        bundle exec rspec calculadora/testes/teste.rb
+        bundle exec rspec calculadora/testes/testes.rb
 
     - name: List directory contents for debugging
       run: ls -R
