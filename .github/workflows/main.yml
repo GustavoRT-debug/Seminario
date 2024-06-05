@@ -25,7 +25,16 @@ jobs:
       run: |
         gem install bundler
         bundle install
-    - name: Run tests
-      run: bundle exec ruby calculadora/testes/testes.rb
-           bundle exec rspec calculadora/testes/teste_mock.rb
-  
+
+    - name: Run tests and generate coverage report
+      run: bundle exec ruby coverage_report.rb
+
+    - name: Upload coverage to Codecov
+      if: success()
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage/.resultset.json
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
