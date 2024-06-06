@@ -30,6 +30,7 @@ jobs:
       run: |
         bundle exec ruby calculadora/testes/testes.rb
         bundle exec rspec calculadora/testes/teste2.rb
+        bundle exec rspec calculadora/testes/teste3_mock.rb
 
     - name: Generate coverage report
       run: bundle exec ruby calculadora/testes/coverage_report.rb
